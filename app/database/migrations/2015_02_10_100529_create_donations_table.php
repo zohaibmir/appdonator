@@ -18,7 +18,7 @@ class CreateDonationsTable extends Migration {
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->integer('organisation_id')->unsigned();
-            $table->foreign('organisation_id')->references('id')->on('organisation')->onDelete('cascade');
+            $table->foreign('organisation_id')->references('id')->on('organisations')->onDelete('cascade');
 
             $table->float('amount')->default(0);
             //Recursive Donations

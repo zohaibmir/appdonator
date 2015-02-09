@@ -22,6 +22,8 @@ class CreateOrganisationsTable extends Migration {
             //0 for organisation and 1 for project
             $table->tinyInteger('type')->default(0);
 
+            $table->integer('category_id')->unsigned();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             //Fields for active organisations
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
