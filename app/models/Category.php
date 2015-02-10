@@ -11,7 +11,7 @@
  *
  * @author ding
  */
-class Categories extends Base {
+class Category extends Base {
 
     /**
      * The database table used by the model.
