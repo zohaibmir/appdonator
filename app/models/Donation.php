@@ -11,7 +11,7 @@
  *
  * @author ding
  */
-class Donations extends Donations {
+class Donation extends Base {
 
     /**
      * The database table used by the model.
