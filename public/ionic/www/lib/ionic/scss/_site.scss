@@ -1,0 +1,104 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11-Feb-2015, 10:45:38
+    Author     : ding
+*/
+
+.main-container {
+    padding-bottom: 100px;
+}
+
+body {
+    background-color: #e8e9ed;
+}
+
+p  {
+    padding: $content-padding;
+    margin: 0px;
+    color:$gray;
+    font-size: $font-size-base;
+}
+h4 {
+    padding: $content-padding;
+}
+.row, .col {
+    padding: 0;
+}
+.bar {
+    &.bar-balanced  {
+        .title-sub {
+            font-size: $font-size-title;
+            color: $black;
+            letter-spacing: normal;
+        }
+    }
+}
+.bar-subheader  {
+    background-color: $balanced;
+    h3 {
+        color:$light;
+        text-align: center;
+    }
+}
+
+.item-heading {
+    background-color: transparent;
+    border-top: none;
+    font-weight: bold;
+    color:$gray;
+}
+
+a.button-next {
+    display: block;
+    text-align: left;
+    border-color: $button-light-border;
+}
+.driving-invitation {
+    margin-bottom: 20px;
+}
+.green-text {
+    color: $balanced !important;
+}
+
+.search-box {
+    border-radius: 8px;
+}
+.padding-zero {
+    padding: 0px;
+}
+
+a {
+    color: $balanced;
+    text-decoration: none;
+}
+p.error {
+    color: #a94442 !important;
+}
+span {
+    font-size:$font-size-base;
+}
+
+form .has-error {
+    border-left: 5px solid #cc2511;
+    border-right:5px solid #cc2511;
+}
+
+form .has-success {
+    border-left: 5px solid #3d8b3d; 
+    border-right:5px solid #3d8b3d;
+}
+
+.icon-success {
+    display: none;
+}
+
+.icon-error {
+    display: block;
+    position: relative;
+    right: 15px; 
+    color: #ef4e3a;
+}
