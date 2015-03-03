@@ -24,4 +24,9 @@ class Organisation extends Base {
      * Validation rules
      */
     public $rules = array();
+
+    public function category() {
+        return $this->belongsTo('Category');
+    }
+
 }

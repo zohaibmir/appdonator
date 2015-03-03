@@ -21,8 +21,26 @@ class Category extends Base {
     protected $table = 'categories';
 
     /**
+     * To protect against mass assignment
+     * 
+     */
+    protected $fillable = array('title', 'description', 'icon', 'status');
+
+    /*
+     * prevents the listed columns from mass assignment.
+     */
+    protected $guarded = array('id');
+
+    /**
      * Validation rules
      */
-    public $rules = array();
+    public static $rules = array('title' => 'required', 'description' => 'required', 'status' => 'required');
+    
+    /*
+     *  A category can have many organisations
+     */
+    public function organisations() {
+        return $this->hasMany('Organisation', 'category_id');
+    }
 
 }
