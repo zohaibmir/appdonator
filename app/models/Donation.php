@@ -25,4 +25,8 @@ class Donation extends Base {
      */
     public $rules = array();
 
+    public function user() {
+        return $this->belongsTo('User');
+    }
+
 }

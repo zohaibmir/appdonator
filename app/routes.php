@@ -12,21 +12,22 @@
  */
 
 Route::get('', 'HomeController@showWelcome');
-Route::controller('user', 'UserController');
 Route::controller('ngo', 'OrganisationController');
 Route::controller('donation', 'DonationController');
+/*
 
-
-Route::post('login', 'UserController@postLogin');
-Route::post('signup', 'UserController@postSignUp');
-Route::get('logout', 'UserController@getLogout');
-
+  Route::post('login', 'UserController@postLogin');
+  Route::post('signup', 'UserController@postSignUp');
+  Route::get('logout', 'UserController@getLogout');
+ */
 
 
 // API ROUTES ==================================  
 Route::group(array('prefix' => 'api'), function() {
-    Route::resource('category', 'CategoryController', array('only' => array('index', 'show', 'destroy', 'store', 'organisations')));
-    
-     Route::get('category/organisations/{id}', 'CategoryController@organisations');
+    Route::resource('user', 'UserController', array('only' => array('index','store', 'show', 'destroy', 'update')));
+    Route::get('user/history/{id}', 'UserController@getHistory');
+    Route::get('user/logout/{id}', 'UserController@logout');
+    Route::resource('category', 'CategoryController', array('only' => array('index', 'show', 'destroy', 'store')));
+    Route::get('category/organisations/{id}', 'CategoryController@organisations');
 });
 
