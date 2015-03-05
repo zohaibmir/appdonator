@@ -19,6 +19,7 @@ class CreateOrganisationsTable extends Migration {
             $table->string('phone')->unique();
             $table->text('address')->nullable();
             $table->text('zip')->nullable();
+            $table->text('website')->nullable();
             //0 for organisation and 1 for project
             $table->tinyInteger('type')->default(0);
 

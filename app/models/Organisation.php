@@ -20,10 +20,15 @@ class Organisation extends Base {
      */
     protected $table = 'organisations';
 
+    /*
+     * prevents the listed columns from mass assignment.
+     */
+    protected $guarded = array('id');
+
     /**
      * Validation rules
      */
-    public $rules = array();
+    public $rules = array('name' => 'required', 'description' => 'required', 'email' => 'required|email', 'phone' => 'required', 'address' => 'required', 'zip' => 'required','city' => 'required', 'category_id' => 'required', 'website' => 'required');
 
     public function category() {
         return $this->belongsTo('Category');
