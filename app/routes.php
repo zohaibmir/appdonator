@@ -1,5 +1,5 @@
 <?php
-
+header('Access-Control-Allow-Origin: http://donator.dev:8081/api');
 /*
   |--------------------------------------------------------------------------
   | Application Routes
