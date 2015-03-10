@@ -1,0 +1,12 @@
+{
+  "name": "donateNow",
+  "app_id": "f896d393",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
