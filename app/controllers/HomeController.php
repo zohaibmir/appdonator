@@ -17,7 +17,7 @@ class HomeController extends BaseController {
     public function showWelcome() {
         $view_data['title'] = Lang::get('site.chome-login-title');
         $this->layout->title = 'App Donator';
-        $this->layout->content = View::make('home', $view_data);
+        $this->layout->content = View::make('hello', $view_data);
     }
 
 }
