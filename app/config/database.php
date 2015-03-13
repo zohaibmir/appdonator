@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'appdonator',
-			'username'  => 'root',
-			'password'  => '',
+			'host'      => 'ionic-154320.mysql.binero.se',
+			'database'  => '154320-ionic',
+			'username'  => '154320_jw22866',
+			'password'  => '0!onIic12',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

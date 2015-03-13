@@ -8,7 +8,7 @@ angular.module('donatenow.services', [])
             return {
                 // get all the comments
                 get: function () {
-                    return $http.get('http://donator.dev:8081/api/category');
+                    return $http.get('http://telia.dingdev.se/api/category');
                 }
             }
         });
