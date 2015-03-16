@@ -22,6 +22,8 @@ class CreateUsersTable extends Migration {
             $table->string('phone')->unique();
             $table->text('address')->nullable();
             $table->text('zip')->nullable();
+            $table->text('city')->nullable();
+            $table->text('description')->nullable();
             //Fields for activation
             $table->tinyInteger('status')->default(0);
 
