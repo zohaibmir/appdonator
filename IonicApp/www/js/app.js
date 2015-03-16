@@ -56,6 +56,17 @@ angular.module('donatenow', ['ionic', 'donatenow.controllers', 'donatenow.servic
                             }
                         }
                     })
+                    
+                    .state('donatenow.signup', {
+                        url: '/user/signup',
+                        views: {
+                            'menuContent': {
+                                templateUrl: 'templates/signup.html',
+                                controller: 'UserCtrl'
+                            }
+                        }
+                    })
+                    
 
             // if none of the above states are matched, use this as the fallback
             $urlRouterProvider.otherwise('/donatenow/categories');
