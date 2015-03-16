@@ -1,16 +1,48 @@
 angular.module('donatenow.controllers', ['ngResource'])
 
-    .controller('TodoCtrl', function ($scope, $ionicModal, Category) {
-          
-             Category.get()
+
+
+
+        .controller('CategoriesCtrl', function ($scope, $stateParams, Category) {
+            $scope.loading = true;
+            Category.all()
+                    .success(function (data) {
+                        $scope.categories = data['categories'];
+                        $scope.loading = false;
+                        console.log(JSON.stringify(data['categories']));
+                    });
+        })
+
+        .controller('CategoryDetailCtrl', function ($scope, $stateParams, Category) {
+            Category.get($stateParams.categoryId).success(function (data) {
+                $scope.category = data['category'];
+                $scope.loading = false;
+                console.log(JSON.stringify(data['category']));
+            });
+        })
+
+
+
+        .controller('OrganisationsCtrl', function ($scope, $stateParams, Category) {
+
+        })
+
+        .controller('UserCtrl', function ($scope, $stateParams, Category) {
+
+        })
+
+
+        .controller('TodoCtrl', function ($scope, $ionicModal, Category) {
+
+            Category.get()
                     .success(function (data) {
                         $scope.tasks = data['categories'];
                         $scope.loading = false;
-                         console.log(JSON.stringify(data['categories']));
+                        console.log(JSON.stringify(data['categories']));
                     });
 
-           
-          
+
+
             // Create and load the Modal
             $ionicModal.fromTemplateUrl('new-task.html', function (modal) {
                 $scope.taskModal = modal;
@@ -37,4 +69,4 @@ angular.module('donatenow.controllers', ['ngResource'])
             $scope.closeNewTask = function () {
                 $scope.taskModal.hide();
             };
-    });
+        });

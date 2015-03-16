@@ -7,8 +7,12 @@ angular.module('donatenow.services', [])
 
             return {
                 // get all the comments
-                get: function () {
+                all: function () {
                     return $http.get('http://telia.dingdev.se/api/category');
+                },
+                get: function (categoryId) {
+                    // Simple index lookup
+                    return $http.get('http://telia.dingdev.se/api/category/'+categoryId);
                 }
             }
         });
