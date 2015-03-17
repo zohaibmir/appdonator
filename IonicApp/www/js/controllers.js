@@ -1,6 +1,13 @@
 angular.module('donatenow.controllers', ['ngResource'])
 
 
+        .controller('HomeCtrl', function ($scope, $stateParams, Category) {
+
+        })
+
+        .controller('AboutCtrl', function ($scope, $stateParams, Category) {
+
+        })
 
 
         .controller('CategoriesCtrl', function ($scope, $stateParams, Category) {

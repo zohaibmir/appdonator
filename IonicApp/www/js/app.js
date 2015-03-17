@@ -35,6 +35,16 @@ angular.module('donatenow', ['ionic', 'donatenow.controllers', 'donatenow.servic
                         templateUrl: "templates/menu.html",
                         controller: 'CategoriesCtrl'
                     })
+                    //Home Page Controller
+                    .state('donatenow.home', {
+                        url: '/home',
+                        views: {
+                            'menuContent': {
+                                templateUrl: 'templates/home.html',
+                                controller: 'HomeCtrl'
+                            }
+                        }
+                    })
 
                     // Each tab has its own nav history stack:
 
@@ -56,7 +66,7 @@ angular.module('donatenow', ['ionic', 'donatenow.controllers', 'donatenow.servic
                             }
                         }
                     })
-                    
+
                     .state('donatenow.signup', {
                         url: '/user/signup',
                         views: {
@@ -67,8 +77,18 @@ angular.module('donatenow', ['ionic', 'donatenow.controllers', 'donatenow.servic
                         }
                     })
                     
+                    .state('donatenow.about', {
+                        url: '/about',
+                        views: {
+                            'menuContent': {
+                                templateUrl: 'templates/about.html',
+                                controller: 'AboutCtrl'
+                            }
+                        }
+                    })
+
 
             // if none of the above states are matched, use this as the fallback
-            $urlRouterProvider.otherwise('/donatenow/categories');
+            $urlRouterProvider.otherwise('/donatenow/home');
 
         });
